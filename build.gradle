@@ -1,0 +1,10 @@
+task helloWorld {
+	doLast {
+		println "Hello World!"
+	}
+}
+
+//精简方式定义
+task helloWorldV2 << {
+	println "Hello World2!"
+}
