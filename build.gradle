@@ -20,3 +20,13 @@ jar {
         attributes 'Main-Class': 'com.zeek.todo.AppMain'
     }
 }
+
+//增加仓库依赖
+repositories {
+	mavenCentral()
+}
+
+//增加依赖
+dependencies {
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+}
