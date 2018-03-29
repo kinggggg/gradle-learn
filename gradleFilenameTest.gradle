@@ -1,6 +1,0 @@
-//默认的情况下在命令行执行如下的命令
-//gradle
-//时，gradle会自动寻找名称为build.gradle文件
-
-//若构建文件的名称不是这个名称的话，可以通过如下的方式执行特定的构建文件
-//gradle -b gradleFilenameTest.gradle
