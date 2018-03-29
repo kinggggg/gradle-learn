@@ -5,8 +5,16 @@
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds/
  */
 
+//应用java插件
 apply plugin: 'java'
 
+//指明生成jar文件的版本号。会显示在生成的jar文件的文件名称中
+version = 0.1
+
+//设置java版本编译兼容1.8
+sourceCompatibility = 1.8
+
+//在生成的jar文件的MANIFEST.MF文件中指明主程序的入口
 jar {
     manifest {
         attributes 'Main-Class': 'com.zeek.todo.AppMain'
