@@ -12,7 +12,31 @@ apply plugin: 'war'
 apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
 
 //指明生成jar文件的版本号。会显示在生成的jar文件的文件名称中
-version = 0.1
+//version = 0.1
+
+//通过POJO来表示项目版本
+version = new ProjectVersion(0, 1)
+class ProjectVersion {
+    Integer major
+    Integer minor
+    Boolean release
+
+    ProjectVersion(Integer major, Integer minor) {
+        this.major = major
+        this.minor = minor
+        this.release = Boolean.FALSE
+    }
+
+    ProjectVersion(Integer major, Integer minor, Boolean release) {
+        this.ProjectVersion(major, minor)
+        this.release = Boolean.FALSE
+    }
+
+    @Override
+    String toString() {
+        "$major.$minor${release ? '' : '-SNAPSHOT'}"
+    }
+}
 
 //设置java版本编译兼容1.8
 sourceCompatibility = 1.8
