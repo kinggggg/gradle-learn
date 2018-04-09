@@ -46,6 +46,7 @@ task printVersion {
 	}
 }
 
+//通过闭包形式动态添加action
 printVersion.doFirst {
     println "First Action"
 }
