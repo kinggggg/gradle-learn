@@ -53,10 +53,19 @@ repositories {
 	mavenCentral()
 }
 
+//自定义配置
+configurations {
+    test1 {
+        description = "测试自定义配置"
+        visible = false
+    }
+}
+
 //增加依赖
 dependencies {
 	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
     runtime group: 'javax.servlet.jsp.jstl', name: 'jstl', version: '1.2'
+    test1 group: 'javax.servlet.jsp.jstl', name: 'jstl', version: '1.2'
 }
 
 //定义一个task
